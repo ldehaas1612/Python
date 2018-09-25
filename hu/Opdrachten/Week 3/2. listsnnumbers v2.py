@@ -1,7 +1,7 @@
-list = [0, 5, -14, 3, 9, 12, -3, 'aa']
+list = [0, 5, -14, 3, 9, 12, -3]
 
-min = int(min(list))
-max = int(max(list))
+min = min(list)
+max = max(list)
 diff = max - min
 
 print("min is:",min,"and max is",max)
