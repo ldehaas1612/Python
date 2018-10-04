@@ -1,13 +1,10 @@
-def new_password(old,new):
-    if old != new:
-        if len(new) >= 6:
-            if hasNumbers(new):
-                return True
-    return False
-
 def hasNumbers(inputString):
     return any(char.isdigit() for char in inputString)
 
-oldPass = input("Wat is het oude wachtwoord: ")
-newPass = input("Wat is het nieuwe wachtwoord: ")
-print(new_password(oldPass,newPass))
+def new_password(old, new):
+    isAtleast6Characters = len(new) >= 6
+    isDifferent = old != new
+
+    return isDifferent and isAtleast6Characters and hasNumbers(new)
+
+print(new_password(input("Wat is het oude wachtwoord: "),input("Wat is het nieuwe wachtwoord: ")))
